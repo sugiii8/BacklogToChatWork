@@ -1,0 +1,40 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.4.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	maven {
+        name = 'chatwork4j-repo'
+        url = 'https://github.com/MasahiroSaito/ChatWork4j/raw/master/repo'
+    }
+	mavenCentral()
+}
+
+
+dependencies {
+	// spring
+	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-aop')
+	// backlog
+    compile 'com.nulab-inc:backlog4j:2.2.0'
+	// chatwork
+	compile 'com.MasahiroSaito:ChatWork4j:2.0'
+	// test
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
