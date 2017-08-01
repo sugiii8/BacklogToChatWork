@@ -38,6 +38,11 @@ $ java -jar build/libs/BacklogToChatwork-0.0.1-SNAPSHOT.jar
 # localhost:8080/start
 ```
 
+* test
+```
+$ gradle test
+```
+
 ### バージョン ###
 * java: `1.8.0_111`
 * STS: `3.8.3.RELEASE`
